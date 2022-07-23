@@ -4,3 +4,5 @@
 inp12 cannot be assigned to output as select ```case(5'b01100)``` is not present. 
 
 ![image](https://user-images.githubusercontent.com/92450677/180609397-95d64efa-f65a-43ea-be6f-ba1684b3337d.png)
+![image](https://user-images.githubusercontent.com/92450677/180609664-fe6e6166-d083-4dce-8937-b0ce5435a564.png)
+
