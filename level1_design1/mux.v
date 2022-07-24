@@ -37,8 +37,8 @@ module mux(sel,inp0, inp1, inp2, inp3, inp4, inp5, inp6, inp7, inp8,
       5'b01001: out = inp9;  
       5'b01010: out = inp10;
       5'b01011: out = inp11;
-      5'b01101: out = inp12;          // <--- Missing Select Case Here (Bug 1)
-      5'b01101: out = inp13;
+      5'b01101: out = inp12;          // <--- Missing Select Case for 5'b01100 (Bug 1)
+      5'b01101: out = inp13;          // <--- Due to Bug 1 inp12 assigned to out pin for 5'b01101 (Bug 2)
       5'b01110: out = inp14;
       5'b01111: out = inp15;
       5'b10000: out = inp16;
