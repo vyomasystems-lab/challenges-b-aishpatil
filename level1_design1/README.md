@@ -20,3 +20,7 @@ inp30 cannot be assigned to output as select ```case(5'b11110)``` is not present
 It will take default case value
 
 ![image](https://user-images.githubusercontent.com/92450677/180633697-ce379c78-d91b-41f8-9f46-dfaa9982f51c.png)
+
+
+### After Fixing All Bugs
+// Result Image
