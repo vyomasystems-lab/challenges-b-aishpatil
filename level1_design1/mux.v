@@ -55,6 +55,7 @@ module mux(sel,inp0, inp1, inp2, inp3, inp4, inp5, inp6, inp7, inp8,
       5'b11011: out = inp27;
       5'b11100: out = inp28;
       5'b11101: out = inp29;
+                                        // <--- Missing Case for b'11110 (Bug 3)
       default: out = 0;
     endcase
   end

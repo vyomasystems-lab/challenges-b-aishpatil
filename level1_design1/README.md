@@ -13,3 +13,12 @@ Due to Bug 1, out pin is assigned with default case. But when inp12 is assigned 
 ![image](https://user-images.githubusercontent.com/92450677/180633389-8255e4aa-98a8-46cf-a545-f6b0d8263035.png)
 
 ![image](https://user-images.githubusercontent.com/92450677/180633426-4a9d4c1b-5148-4174-9878-df136cc2e796.png)
+
+
+#### 3. Select case for inp30 is Missing
+inp30 cannot be assigned to output as select ```case(5'b11110)``` is not present. 
+It will take default case value
+
+// Img 1
+
+// Img 2
