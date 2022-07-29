@@ -66,7 +66,10 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
       end
       SEQ_1011:
       begin
-        next_state = IDLE;    // Bug 1 
+        if(inp_bit == 1)                      // Bug Fixed
+          next_state<= SEQ_1;
+        else
+          next_state<=SEQ_10;
       end
     endcase
   end
