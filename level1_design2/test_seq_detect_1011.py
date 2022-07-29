@@ -55,11 +55,33 @@ async def test_seq_bug1(dut):
     dut.reset.value = 0
     print()  
 
-    sequence = "1011101101011101101110111011"
+    sequence = "1011011"
+    # sequence = "1011101101011101101110111011"
+    print("Printing Sequence Passing bit, Correct Sequence detection and output from Verilog code")
     for element in range(0, len(sequence)):
         print( sequence[element] , end = ' ')
     print()  
+
     current = 0
+    for element in range(0, len(sequence)):
+        current = sequence_detection(sequence[element],current)
+        print( "1" if current == 4 else "0" , end = ' ')    
+    print()  
+
+    for element in range(0, len(sequence)):
+        if(sequence[element] == '1'):
+            dut.inp_bit.value = 1
+        else:
+            dut.inp_bit.value = 0
+        await FallingEdge(dut.clk)
+        from_verilog = dut.seq_seen.value
+        print(str(from_verilog), end = ' ')
+    print()  
+    
+    # reset
+    dut.reset.value = 1
+    await FallingEdge(dut.clk)  
+    dut.reset.value = 0
 
     for element in range(0, len(sequence)):
         current = sequence_detection(sequence[element],current)
@@ -77,9 +99,8 @@ async def test_seq_bug1(dut):
         # if (str(from_verilog) != "1" if current == 4 else "0"):
         #     print('\nBug Found:\nThe bug is present at input line '+ sequence[element] + "  " + str(from_verilog) + " " + "1" if current == 4 else "0")   # duct.dut.inp11.value.value
         #     raise TestFailure("Failure!")
-        
-        # assert (str(from_verilog) != "1" if current == 4 else "0") , '\nBug Found:\nThe bug is present at input line '+ sequence[element] + "  " + str(from_verilog) + " " + "1" if current == 4 else "0"
-    
+        check = '1' if current == 4 else '0'
+        assert (str(from_verilog) == check) , '\nBug Detected:\nThe bug is present On input '+ sequence[element] + "\nInput Number \t: " + str(element+1) + "\nOut from Verilog is : " + str(from_verilog) + "\nCurrent State is  \t: "+ str(current) + "\nOut must be  \t: " + "1" if current == 4 else "0" 
     print()  
 
     cocotb.log.info('#### CTB: Develop your test here! ######')
