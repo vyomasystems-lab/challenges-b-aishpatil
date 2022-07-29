@@ -93,14 +93,6 @@ async def test_seq_bug1(dut):
         await FallingEdge(dut.clk)
         from_verilog = dut.seq_seen.value
         print(str(from_verilog), end = ' ')
-        # print( "1" if current == 4 else "0" , end = ' ')
-        # assert str(from_verilog) == "1" if current == 4 else "0" , "Sequence Detector has Bug"
-
-        # if (str(from_verilog) != "1" if current == 4 else "0"):
-        #     print('\nBug Found:\nThe bug is present at input line '+ sequence[element] + "  " + str(from_verilog) + " " + "1" if current == 4 else "0")   # duct.dut.inp11.value.value
-        #     raise TestFailure("Failure!")
         check = '1' if current == 4 else '0'
         assert (str(from_verilog) == check) , '\nBug Detected:\nThe bug is present On input '+ sequence[element] + "\nInput Number \t: " + str(element+1) + "\nOut from Verilog is : " + str(from_verilog) + "\nCurrent State is  \t: "+ str(current) + "\nOut must be  \t: " + "1" if current == 4 else "0" 
     print()  
-
-    cocotb.log.info('#### CTB: Develop your test here! ######')
