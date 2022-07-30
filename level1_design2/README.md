@@ -19,7 +19,6 @@ Overlapping Sequence is not detecting as after detecting 1st sequence next chang
 ### 3. Overlapping Sequence is Not detecting at state 1
 ![Bug 3](https://user-images.githubusercontent.com/92450677/181866280-3c5b01d8-06ce-4863-864b-5a24ba209ff7.png)
 ![image](https://user-images.githubusercontent.com/92450677/181866308-5eba2a10-5adc-4b3d-a3ce-212ac35c9e0d.png)
-
 #### After Fixing Bug 3
 ![image](https://user-images.githubusercontent.com/92450677/181866326-4c33340f-c253-4b89-9315-e1c6987bc69d.png)
 
