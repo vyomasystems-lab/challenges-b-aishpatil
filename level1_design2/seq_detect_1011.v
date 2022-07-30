@@ -62,11 +62,11 @@ module seq_detect_1011(seq_seen, inp_bit, reset, clk);
         if(inp_bit == 1)
           next_state = SEQ_1011;
         else
-          next_state = IDLE;
+          next_state = IDLE;            // Bug 2 - Here Next STate must be SEQ_10
       end
       SEQ_1011:
       begin
-        if(inp_bit == 1)                      // Bug Fixed
+        if(inp_bit == 1)                      // Bug 1 Fixed
           next_state<= SEQ_1;
         else
           next_state<=SEQ_10;

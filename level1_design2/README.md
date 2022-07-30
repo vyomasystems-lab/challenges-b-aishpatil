@@ -1,6 +1,6 @@
 # CTB Bugs for Level 1 Design 2
 
-### 1. Overlapping Sequence is Not detecting
+### 1. Overlapping Sequence is Not detecting at state 4
 Overlapping Sequence is not detecting as after detecting 1st sequence next changes to `IDLE`. This results in not succesful detection in overlapping sequence.
 
 ![image](https://user-images.githubusercontent.com/92450677/181771627-32e1412f-1e37-4437-8acc-c471a998c9db.png)
@@ -9,3 +9,7 @@ Overlapping Sequence is not detecting as after detecting 1st sequence next chang
 #### After Fixing Bug 1
 
 ![image](https://user-images.githubusercontent.com/92450677/181775188-b50d679b-eddb-4459-a1ad-9c160be99e63.png)
+
+### 2. Overlapping Sequence is Not detecting at state 3
+
+// Image

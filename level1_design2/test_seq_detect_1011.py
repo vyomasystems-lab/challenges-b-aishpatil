@@ -55,7 +55,8 @@ async def test_seq_bug1(dut):
     dut.reset.value = 0
     print()  
 
-    sequence = "1011011"
+    # sequence = "1011011" # Test 1
+    sequence = "101011"
     # sequence = "1011101101011101101110111011"
     print("Printing Sequence Passing bit, Correct Sequence detection and output from Verilog code")
     for element in range(0, len(sequence)):
