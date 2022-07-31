@@ -32,12 +32,15 @@ def run_test(dut):
     yield Timer(10) 
     dut.RST_N.value <= 1
 
+# AND - 7033 -00000000000000000111000000110011
+# OR  - 6033  - 00000000000000000110000000110011
+
     ######### CTB : Modify the test to expose the bug #############
     # input transaction
-    mav_putvalue_src1 = 0x5
-    mav_putvalue_src2 = 0x0
-    mav_putvalue_src3 = 0x0
-    mav_putvalue_instr = 0x101010B3
+    mav_putvalue_src1 = 0x00000001
+    mav_putvalue_src2 = 0x00000001
+    mav_putvalue_src3 = 0x00000001
+    mav_putvalue_instr = 0x40006033
 
     # expected output from the model
     expected_mav_putvalue = bitmanip(mav_putvalue_instr, mav_putvalue_src1, mav_putvalue_src2, mav_putvalue_src3)
@@ -48,8 +51,13 @@ def run_test(dut):
     dut.mav_putvalue_src3.value = mav_putvalue_src3
     dut.EN_mav_putvalue.value = 1
     dut.mav_putvalue_instr.value = mav_putvalue_instr
-  
+
     yield Timer(1) 
+    print("src 1 - "+str(dut.mav_putvalue_src1.value))
+    print("src 2 - "+str(dut.mav_putvalue_src2.value))
+    print("src 3 - "+str(dut.mav_putvalue_src3.value))
+    print("Instruction opcode - "+str(dut.mav_putvalue_instr.value))
+  
 
     # obtaining the output
     dut_output = dut.mav_putvalue.value
@@ -58,5 +66,6 @@ def run_test(dut):
     cocotb.log.info(f'EXPECTED OUTPUT={hex(expected_mav_putvalue)}')
     
     # comparison
+    print(dut.mav_putvalue.value)
     error_message = f'Value mismatch DUT = {hex(dut_output)} does not match MODEL = {hex(expected_mav_putvalue)}'
     assert dut_output == expected_mav_putvalue, error_message
