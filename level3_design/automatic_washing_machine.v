@@ -4,6 +4,7 @@
 // Developed By Aishwarya Patil
 
     /* 
+	level3_design/automatic_washing_machine.v
 	#0 reset = 0;
 	#2 start = 1;
 	#4 door_close = 1;
@@ -46,7 +47,7 @@ module automatic_washing_machine(clk, reset, door_close, start, filled, detergen
 			end
 			else
 			begin
-				next_state = current_state;
+				next_state = fill_water;   // Bug 1
 				motor_on = 0;
 				fill_value_on = 0;
 				drain_value_on = 0;
