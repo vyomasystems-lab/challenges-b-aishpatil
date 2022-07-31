@@ -51,7 +51,7 @@ module automatic_washing_machine(clk, reset, door_close, start, filled, detergen
 				motor_on = 0;
 				fill_value_on = 0;
 				drain_value_on = 0;
-				door_lock = 0;
+				door_lock = 1;					// Bug 2
 				soap_wash = 0;
 				water_wash = 0;
 				done = 0;
@@ -93,7 +93,7 @@ module automatic_washing_machine(clk, reset, door_close, start, filled, detergen
 				done = 0;
 			end
 			add_detergent:
-			if(detergent_added==1)
+			if(detergent_added == 1)
 			begin
 				next_state = cycle;
 				motor_on = 0;
