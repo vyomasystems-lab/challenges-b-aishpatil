@@ -47,7 +47,7 @@ module automatic_washing_machine(clk, reset, door_close, start, filled, detergen
 			end
 			else
 			begin
-				next_state = fill_water;   // Bug 1
+				next_state = fill_water;   // Bug 1 Fixed
 				motor_on = 0;
 				fill_value_on = 0;
 				drain_value_on = 0;
