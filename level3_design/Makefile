@@ -4,10 +4,10 @@ TOPLEVEL_LANG ?= verilog
 
 PWD=$(shell pwd)
 
-VERILOG_SOURCES = $(PWD)/               # provide your design path
+VERILOG_SOURCES = $(PWD)/automatic_washing_machine.v               # provide your design path
 
-TOPLEVEL :=           # design file
-MODULE   :=     # test file
+TOPLEVEL := automatic_washing_machine          # design file
+MODULE   := test_automatic_washing_machine    # test file
 
 include $(shell cocotb-config --makefiles)/Makefile.sim
 
