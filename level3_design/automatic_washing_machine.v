@@ -51,7 +51,7 @@ module automatic_washing_machine(clk, reset, door_close, start, filled, detergen
 				motor_on = 0;
 				fill_value_on = 0;
 				drain_value_on = 0;
-				door_lock = 1;					// Bug 2
+				door_lock = 0;					// Bug 2 Fixed
 				soap_wash = 0;
 				water_wash = 0;
 				done = 0;
