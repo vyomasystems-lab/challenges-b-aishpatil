@@ -10,6 +10,7 @@ next_state = -1
 
 start = None
 door_close = None
+reset = None
 
 if(current_state == check_door):
     if(start == 1 and door_close == 1):
