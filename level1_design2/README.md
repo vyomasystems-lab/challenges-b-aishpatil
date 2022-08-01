@@ -10,14 +10,20 @@ This prevents overlapping sequences from being successfully identified.
 ![image](https://user-images.githubusercontent.com/92450677/181775188-b50d679b-eddb-4459-a1ad-9c160be99e63.png)
 
 
-### 2. Overlapping Sequence is Not detecting at state 3
+### 2. SEQ_101
+After detecting sequence pattern 101, ```next_state``` changes to `IDLE` instead of SEQ_10 for bit 0 
+This prevents overlapping sequences from being successfully identified.
+
 ![Bug 2](https://user-images.githubusercontent.com/92450677/181866076-f3258693-3a7d-4f4c-8472-79aac4a9d0c2.png)
 ![image](https://user-images.githubusercontent.com/92450677/181865837-1dcfd7da-2fde-4870-8e0e-5b22274aa6d3.png)
 #### After Fixing Bug 2
 ![image](https://user-images.githubusercontent.com/92450677/181865871-4b3247d4-aa91-4e80-a181-561718b18686.png)
 
 
-### 3. Overlapping Sequence is Not detecting at state 1
+### 3. SEQ_1
+After detecting sequence pattern 1, ```next_state``` changes to `IDLE` instead of SEQ_1 for bit 1
+This prevents overlapping sequences from being successfully identified.
+
 ![Bug 3](https://user-images.githubusercontent.com/92450677/181866280-3c5b01d8-06ce-4863-864b-5a24ba209ff7.png)
 ![image](https://user-images.githubusercontent.com/92450677/181866308-5eba2a10-5adc-4b3d-a3ce-212ac35c9e0d.png)
 #### After Fixing Bug 3
