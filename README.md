@@ -2,7 +2,7 @@
 
 ## Bug Reports
 
-1. [level1_design1](./level1_design1) - MUX
-2. [level1_design2](./level1_design2) - Sequence Detection
-3. [level2_design](./level2_design) - Coprocessor
-4. [level3_design](./level3_design) - Automatic Washing Machine
+### 1. [Multiplexer](./level1_design1)
+### 2. [Sequence Detector](./level1_design2)
+### 3. [Bitmanipulation Coprocessor](./level2_design)
+### 4. [Automatic Washing Machine](./level3_design)
