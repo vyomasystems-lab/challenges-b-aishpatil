@@ -1,7 +1,7 @@
 # CTB Bugs for Level 1 Design 2
 
 ### 1. SEQ_1011
-After detecting 1st sequence pattern 1011, ```next_state``` changes to `IDLE` instead of SEQ_1 for bit 1 or SEQ_10 for bit 0 
+After detecting 1st sequence pattern 1011, ```next_state``` changes to `IDLE` instead of SEQ_1 for bit 1 or SEQ_10 for bit 0 <br>
 This prevents overlapping sequences from being successfully identified.
 
 ![image](https://user-images.githubusercontent.com/92450677/181771627-32e1412f-1e37-4437-8acc-c471a998c9db.png)
@@ -11,7 +11,7 @@ This prevents overlapping sequences from being successfully identified.
 
 
 ### 2. SEQ_101
-After detecting sequence pattern 101, ```next_state``` changes to `IDLE` instead of SEQ_10 for bit 0 
+After detecting sequence pattern 101, ```next_state``` changes to `IDLE` instead of SEQ_10 for bit 0  <br> <br>
 This prevents overlapping sequences from being successfully identified.
 
 ![Bug 2](https://user-images.githubusercontent.com/92450677/181866076-f3258693-3a7d-4f4c-8472-79aac4a9d0c2.png)
@@ -21,7 +21,7 @@ This prevents overlapping sequences from being successfully identified.
 
 
 ### 3. SEQ_1
-After detecting sequence pattern 1, ```next_state``` changes to `IDLE` instead of SEQ_1 for bit 1
+After detecting sequence pattern 1, ```next_state``` changes to `IDLE` instead of SEQ_1 for bit 1 <br>
 This prevents overlapping sequences from being successfully identified.
 
 ![Bug 3](https://user-images.githubusercontent.com/92450677/181866280-3c5b01d8-06ce-4863-864b-5a24ba209ff7.png)
