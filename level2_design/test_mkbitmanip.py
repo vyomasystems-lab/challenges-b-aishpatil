@@ -17,7 +17,7 @@ from model_mkbitmanip import *
 
 instruction = {}
 
-instruction[0] = 0x40006033
+instruction[0] = 0x40007033
 instruction[1] = 0x40006033
 instruction[2] = 0x40004033
 instruction[3] = 0x20001033
