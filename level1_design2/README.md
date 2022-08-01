@@ -1,5 +1,6 @@
 # CTB Bugs for Level 1 Design 2
 
+## Bugs
 
 ### 1. SEQ_1011
 
