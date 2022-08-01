@@ -29,7 +29,7 @@
 
 ### 2. SEQ_101
 
-> After detecting sequence pattern 101, ```next_state``` changes to `IDLE` instead of SEQ_10 for bit 0  <br> <br>
+> After detecting sequence pattern 101, ```next_state``` changes to `IDLE` instead of SEQ_10 for bit 0  <br>
 > This prevents overlapping sequences from being successfully identified. 
 > <details>
 >  <summary>Screenshots Here</summary>
