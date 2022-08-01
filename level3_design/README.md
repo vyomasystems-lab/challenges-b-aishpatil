@@ -2,10 +2,9 @@
 
 ### Bug 1 
 When Door is not locked next state must be check door i.e. current state
-
-![image](https://user-images.githubusercontent.com/92450677/182025902-4671f3c2-770b-4f03-9dda-b3d107d590a3.png)
-![image](https://user-images.githubusercontent.com/92450677/182025940-05cadc68-a67d-432a-87bc-d51ee88cfa4b.png)
+![image](https://user-images.githubusercontent.com/92450677/182187228-2b30edfc-6fb9-4d63-b021-bee7ebf74c7c.png)
+![image](https://user-images.githubusercontent.com/92450677/182187482-c510ca89-119c-4cb2-98e2-ebf638d286d1.png)
 
 ### Bug 2
 Door lock on before door Closed
-![image](https://user-images.githubusercontent.com/92450677/182026280-2f64855d-6119-43a2-833d-9dcba68b33a0.png)
+![image](https://user-images.githubusercontent.com/92450677/182187620-12b91b77-9029-4d26-beb8-770678522512.png)
